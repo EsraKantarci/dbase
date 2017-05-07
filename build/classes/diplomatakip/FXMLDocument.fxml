@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diplomatakip.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <FlowPane layoutX="373.0" layoutY="63.0" prefHeight="55.0" prefWidth="824.0">
+         <children>
+            <Button fx:id="seeList" mnemonicParsing="false" prefHeight="43.0" onAction="#seeList" prefWidth="144.0" text="Listeyi Gör">
+               <FlowPane.margin>
+                  <Insets right="10.0" />
+               </FlowPane.margin>
+            </Button>
+            <TextField fx:id="ara" prefHeight="42.0" prefWidth="481.0" promptText="Lütfen anahtar kelime giriniz.">
+               <FlowPane.margin>
+                  <Insets left="20.0" right="10.0" />
+               </FlowPane.margin>
+            </TextField>
+            <Button fx:id="search" mnemonicParsing="false" onAction="#search" prefHeight="41.0" prefWidth="116.0" text="Ara" />
+         </children>
+      </FlowPane>
+      <Label layoutX="20.0" layoutY="69.0" text=" TC:" />
+      <Label layoutX="20.0" layoutY="110.0" text="*Ad:" />
+      <Label layoutX="20.0" layoutY="153.0" text="*Soyad:" />
+      <Label layoutX="20.0" layoutY="237.0" text=" İkametgah:" />
+      <Label layoutX="20.0" layoutY="193.0" text="*Üniversite:" />
+      <Label layoutX="20.0" layoutY="364.0" text=" Diploma Durumu:" />
+      <Label layoutX="20.0" layoutY="313.0" text=" Karar Tarih:" />
+      <Label layoutX="20.0" layoutY="273.0" text=" Karar No:" />
+      <TextField fx:id="tc" layoutX="158.0" layoutY="69.0" />
+      <TextField fx:id="ad" layoutX="158.0" layoutY="105.0" />
+      <TextField fx:id="uni" layoutX="158.0" layoutY="188.0" />
+      <TextField fx:id="soyad" layoutX="158.0" layoutY="148.0" />
+      <TextField fx:id="ikametgah" layoutX="158.0" layoutY="231.0" />
+      <TextField fx:id="kararTarih" layoutX="158.0" layoutY="312.0" />
+      <TextField fx:id="kararNo" layoutX="158.0" layoutY="272.0" />
+      <MenuButton fx:id="durum" layoutX="158.0" layoutY="359.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="237.0" text="Lütfen Seçiniz">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#tasdik" text="Tasdikli Diploma" />
+          <MenuItem mnemonicParsing="false" onAction="#iptal" text="İptal Edilmiş Diploma" />
+            <MenuItem mnemonicParsing="false" onAction="#aski" text="Askıya Alınmış Diploma" />
+        </items>
+      </MenuButton>
+      <TableView fx:id="tableview" layoutX="-4.0" layoutY="488.0" prefHeight="357.0" prefWidth="1208.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Sıra" />
+            <TableColumn fx:id="tctb" prefWidth="146.0" text="TC" />
+            <TableColumn fx:id="adtb" prefWidth="123.0" text="Ad" />
+            <TableColumn fx:id="soyadtb" prefWidth="128.0" text="Soyad" />
+            <TableColumn fx:id="unitb" prefWidth="159.0" text="Üniversite" />
+            <TableColumn fx:id="ikametgahtb" prefWidth="129.0" text="İkametgah" />
+            <TableColumn fx:id="kararnotb" prefWidth="142.0" text="Karar No" />
+            <TableColumn fx:id="karartarihtb" minWidth="8.0" prefWidth="148.0" text="Karar Tarihi" />
+            <TableColumn fx:id="durumtb" prefWidth="157.0" text="Diploma Durumu" />
+        </columns>
+      </TableView>
+      <Button fx:id="addNew" layoutX="285.0" layoutY="408.0" mnemonicParsing="false" onAction="#addNew" text="Diploma Ekle" />
+      <Button fx:id="update" layoutX="158.0" layoutY="408.0" mnemonicParsing="false" onAction="#guncelle" prefHeight="31.0" prefWidth="122.0" text="Kaydı Güncelle" />
+      <Label fx:id="aciklama" layoutX="496.0" layoutY="156.0" text="İyi günler!&#10;Diploma takip sistemimize hoşgeldiniz.&#10;Kayıtlı diplomaları görmek için &quot;Listeyi Gör&quot;e;&#10;Yeni kayıt eklemek için ise yandaki bilgileri doldurarak &quot;Diploma Ekle&quot;ye tıklayınız.&#10;Diplomayı anahtar kelime ile üstteki bardan arayabilirsiniz;&#10;ya da isterseniz soldaki listeden bilgi girerek alttaki diploma ara tuşu ile arayabilirsiniz.&#10;" textAlignment="CENTER" />
+      <Label layoutX="373.0" layoutY="14.0" text="Diploma Takip ve Kayıt Sistemi" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

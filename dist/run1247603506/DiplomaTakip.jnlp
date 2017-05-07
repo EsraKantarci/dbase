@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="DiplomaTakip.jnlp">
+  <information>
+    <title>DiplomaTakip</title>
+    <vendor>n</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="DiplomaTakip.jar" size="10074" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.42-bin.jar" size="996444" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="DiplomaTakip" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="diplomatakip.DiplomaTakip"  name="DiplomaTakip" />
+  <update check="always"/>
+</jnlp>
